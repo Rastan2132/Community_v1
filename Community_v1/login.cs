@@ -31,9 +31,9 @@ namespace Community_v1
 
             //---------------------------------------------------//
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `lodin` = " + mailUser+ " AND `password`="+ passUser, database.getConnection());
-           // command.Parameters.Add("@mU", MySqlDbType.VarChar).Value = mailUser;
-           // command.Parameters.Add("@pU", MySqlDbType.VarChar).Value = passUser;
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @mU AND `password`= @pU", database.getConnection());
+            command.Parameters.Add("@mU", MySqlDbType.VarChar).Value = mailUser;
+            command.Parameters.Add("@pU", MySqlDbType.VarChar).Value = passUser;
 
             //---------------------------------------------------//
 

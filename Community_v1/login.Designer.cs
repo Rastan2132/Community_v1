@@ -26,12 +26,12 @@ namespace Community_v1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonRegister = new System.Windows.Forms.Button();
             this.or = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
             this.password_see = new System.Windows.Forms.PictureBox();
-            this.password = new System.Windows.Forms.TextBox();
-            this.mail = new System.Windows.Forms.TextBox();
+            this.passwordText = new System.Windows.Forms.TextBox();
+            this.loginText = new System.Windows.Forms.TextBox();
             this.icon_lock = new System.Windows.Forms.PictureBox();
             this.icon_user = new System.Windows.Forms.PictureBox();
             this.Text_login = new System.Windows.Forms.Label();
@@ -54,12 +54,12 @@ namespace Community_v1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.buttonRegister);
             this.panel1.Controls.Add(this.or);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.password_see);
-            this.panel1.Controls.Add(this.password);
-            this.panel1.Controls.Add(this.mail);
+            this.panel1.Controls.Add(this.passwordText);
+            this.panel1.Controls.Add(this.loginText);
             this.panel1.Controls.Add(this.icon_lock);
             this.panel1.Controls.Add(this.icon_user);
             this.panel1.Controls.Add(this.Text_login);
@@ -68,21 +68,22 @@ namespace Community_v1
             this.panel1.Size = new System.Drawing.Size(250, 247);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // buttonRegister
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(138)))), ((int)(((byte)(200)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(58, 187);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 29);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Регистрироватся";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(138)))), ((int)(((byte)(200)))));
+            this.buttonRegister.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.buttonRegister.FlatAppearance.BorderSize = 0;
+            this.buttonRegister.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRegister.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonRegister.ForeColor = System.Drawing.Color.White;
+            this.buttonRegister.Location = new System.Drawing.Point(58, 187);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(139, 29);
+            this.buttonRegister.TabIndex = 8;
+            this.buttonRegister.Text = "Регистрироватся";
+            this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // or
             // 
@@ -95,21 +96,22 @@ namespace Community_v1
             this.or.TabIndex = 7;
             this.or.Text = "или";
             // 
-            // button1
+            // buttonLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(138)))), ((int)(((byte)(200)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(58, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 29);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Войти";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(138)))), ((int)(((byte)(200)))));
+            this.buttonLogin.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.buttonLogin.FlatAppearance.BorderSize = 0;
+            this.buttonLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLogin.ForeColor = System.Drawing.Color.White;
+            this.buttonLogin.Location = new System.Drawing.Point(58, 132);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(139, 29);
+            this.buttonLogin.TabIndex = 6;
+            this.buttonLogin.Text = "Войти";
+            this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // password_see
             // 
@@ -120,23 +122,21 @@ namespace Community_v1
             this.password_see.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.password_see.TabIndex = 5;
             this.password_see.TabStop = false;
-            this.password_see.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // password
+            // passwordText
             // 
-            this.password.Location = new System.Drawing.Point(58, 90);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(139, 27);
-            this.password.TabIndex = 4;
-            this.password.UseSystemPasswordChar = true;
-            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
+            this.passwordText.Location = new System.Drawing.Point(58, 90);
+            this.passwordText.Name = "passwordText";
+            this.passwordText.Size = new System.Drawing.Size(139, 27);
+            this.passwordText.TabIndex = 4;
+            this.passwordText.UseSystemPasswordChar = true;
             // 
-            // mail
+            // loginText
             // 
-            this.mail.Location = new System.Drawing.Point(58, 57);
-            this.mail.Name = "mail";
-            this.mail.Size = new System.Drawing.Size(139, 27);
-            this.mail.TabIndex = 3;
+            this.loginText.Location = new System.Drawing.Point(58, 57);
+            this.loginText.Name = "loginText";
+            this.loginText.Size = new System.Drawing.Size(139, 27);
+            this.loginText.TabIndex = 3;
             // 
             // icon_lock
             // 
@@ -147,7 +147,6 @@ namespace Community_v1
             this.icon_lock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.icon_lock.TabIndex = 2;
             this.icon_lock.TabStop = false;
-            this.icon_lock.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // icon_user
             // 
@@ -170,7 +169,6 @@ namespace Community_v1
             this.Text_login.Size = new System.Drawing.Size(135, 25);
             this.Text_login.TabIndex = 0;
             this.Text_login.Text = "Авторизация";
-            this.Text_login.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -226,7 +224,6 @@ namespace Community_v1
             this.Down.TabIndex = 0;
             this.Down.Text = "2022 © Community.";
             this.Down.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Down.Click += new System.EventHandler(this.Down_Click);
             // 
             // login
             // 
@@ -243,7 +240,6 @@ namespace Community_v1
             this.MinimumSize = new System.Drawing.Size(421, 510);
             this.Name = "login";
             this.Text = "Login in Community.";
-            this.Load += new System.EventHandler(this.login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_see)).EndInit();
@@ -266,11 +262,11 @@ namespace Community_v1
         private System.Windows.Forms.Label Text_login;
         private System.Windows.Forms.PictureBox icon_lock;
         private System.Windows.Forms.PictureBox icon_user;
-        private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.TextBox mail;
+        private System.Windows.Forms.TextBox passwordText;
+        private System.Windows.Forms.TextBox loginText;
         private System.Windows.Forms.PictureBox password_see;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.Label or;
     }
 }

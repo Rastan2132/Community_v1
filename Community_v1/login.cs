@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,35 +17,37 @@ namespace Community_v1
         {
             InitializeComponent();
         }
-
-        private void login_Load(object sender, EventArgs e)
+        //----------------------###-----------------------------//
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
+            string mailUser = loginText.Text;
+            string passUser = passwordText.Text;
 
+            //---------------------------------------------------//
+
+            DB database = new DB();
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            //---------------------------------------------------//
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `lodin` = " + mailUser+ " AND `password`="+ passUser, database.getConnection());
+           // command.Parameters.Add("@mU", MySqlDbType.VarChar).Value = mailUser;
+           // command.Parameters.Add("@pU", MySqlDbType.VarChar).Value = passUser;
+
+            //---------------------------------------------------//
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
+                MessageBox.Show("Уху... Вы вошли в систему");
+            else
+                MessageBox.Show("Что-то не так...");
         }
 
-        private void Down_Click(object sender, EventArgs e)
+        private void buttonRegister_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

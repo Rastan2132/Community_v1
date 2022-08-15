@@ -49,5 +49,24 @@ namespace Community_v1
         {
 
         }
+
+
+        public int passIndex = 1;
+        public string textPassForMenu = "password";
+
+       
+        private void password_see_Click(object sender, EventArgs e)
+        {
+            if (passIndex == 1)
+            {
+                passwordText.UseSystemPasswordChar = false;
+                passIndex = 2;
+            }
+            else
+            {
+                passwordText.UseSystemPasswordChar = true;
+                passIndex = 1;
+            }
+        }
     }
 }

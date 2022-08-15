@@ -26,12 +26,12 @@ namespace Community_v1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.loginText = new Community_v1.CueTextBox();
+            this.passwordText = new Community_v1.CueTextBox();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.or = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.password_see = new System.Windows.Forms.PictureBox();
-            this.passwordText = new System.Windows.Forms.TextBox();
-            this.loginText = new System.Windows.Forms.TextBox();
             this.icon_lock = new System.Windows.Forms.PictureBox();
             this.icon_user = new System.Windows.Forms.PictureBox();
             this.Text_login = new System.Windows.Forms.Label();
@@ -54,12 +54,12 @@ namespace Community_v1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
+            this.panel1.Controls.Add(this.loginText);
+            this.panel1.Controls.Add(this.passwordText);
             this.panel1.Controls.Add(this.buttonRegister);
             this.panel1.Controls.Add(this.or);
             this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.password_see);
-            this.panel1.Controls.Add(this.passwordText);
-            this.panel1.Controls.Add(this.loginText);
             this.panel1.Controls.Add(this.icon_lock);
             this.panel1.Controls.Add(this.icon_user);
             this.panel1.Controls.Add(this.Text_login);
@@ -67,6 +67,23 @@ namespace Community_v1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 247);
             this.panel1.TabIndex = 0;
+            // 
+            // loginText
+            // 
+            this.loginText.Cue = "e-mail";
+            this.loginText.Location = new System.Drawing.Point(58, 57);
+            this.loginText.Name = "loginText";
+            this.loginText.Size = new System.Drawing.Size(139, 27);
+            this.loginText.TabIndex = 10;
+            // 
+            // passwordText
+            // 
+            this.passwordText.Cue = "password";
+            this.passwordText.Location = new System.Drawing.Point(58, 91);
+            this.passwordText.Name = "passwordText";
+            this.passwordText.Size = new System.Drawing.Size(139, 27);
+            this.passwordText.TabIndex = 9;
+            this.passwordText.UseSystemPasswordChar = true;
             // 
             // buttonRegister
             // 
@@ -122,21 +139,7 @@ namespace Community_v1
             this.password_see.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.password_see.TabIndex = 5;
             this.password_see.TabStop = false;
-            // 
-            // passwordText
-            // 
-            this.passwordText.Location = new System.Drawing.Point(58, 90);
-            this.passwordText.Name = "passwordText";
-            this.passwordText.Size = new System.Drawing.Size(139, 27);
-            this.passwordText.TabIndex = 4;
-            this.passwordText.UseSystemPasswordChar = true;
-            // 
-            // loginText
-            // 
-            this.loginText.Location = new System.Drawing.Point(58, 57);
-            this.loginText.Name = "loginText";
-            this.loginText.Size = new System.Drawing.Size(139, 27);
-            this.loginText.TabIndex = 3;
+            this.password_see.Click += new System.EventHandler(this.password_see_Click);
             // 
             // icon_lock
             // 
@@ -262,12 +265,12 @@ namespace Community_v1
         private System.Windows.Forms.Label Text_login;
         private System.Windows.Forms.PictureBox icon_lock;
         private System.Windows.Forms.PictureBox icon_user;
-        private System.Windows.Forms.TextBox passwordText;
-        private System.Windows.Forms.TextBox loginText;
         private System.Windows.Forms.PictureBox password_see;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.Label or;
+        private CueTextBox passwordText;
+        private CueTextBox loginText;
     }
 }
 

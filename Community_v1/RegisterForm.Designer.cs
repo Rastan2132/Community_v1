@@ -34,15 +34,19 @@ namespace Community_v1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
-            this.passwordText_too = new System.Windows.Forms.TextBox();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.password_see = new System.Windows.Forms.PictureBox();
-            this.passwordText = new System.Windows.Forms.TextBox();
-            this.loginText = new System.Windows.Forms.TextBox();
             this.icon_lock = new System.Windows.Forms.PictureBox();
             this.icon_user = new System.Windows.Forms.PictureBox();
             this.Text_Register = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.loginText = new Community_v1.CueTextBox();
+            this.passText2 = new Community_v1.CueTextBox();
+            this.passText = new Community_v1.CueTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Down = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_see)).BeginInit();
@@ -56,7 +60,7 @@ namespace Community_v1
             this.top.AutoSize = true;
             this.top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
             this.top.Cursor = System.Windows.Forms.Cursors.Default;
-            this.top.Location = new System.Drawing.Point(-5, 0);
+            this.top.Location = new System.Drawing.Point(-5, -125);
             this.top.MaximumSize = new System.Drawing.Size(600, 34);
             this.top.MinimumSize = new System.Drawing.Size(450, 34);
             this.top.Name = "top";
@@ -85,19 +89,18 @@ namespace Community_v1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.passText);
+            this.panel1.Controls.Add(this.passText2);
+            this.panel1.Controls.Add(this.loginText);
             this.panel1.Controls.Add(this.dateTime);
-            this.panel1.Controls.Add(this.passwordText_too);
             this.panel1.Controls.Add(this.buttonRegister);
             this.panel1.Controls.Add(this.password_see);
-            this.panel1.Controls.Add(this.passwordText);
-            this.panel1.Controls.Add(this.loginText);
             this.panel1.Controls.Add(this.icon_lock);
             this.panel1.Controls.Add(this.icon_user);
             this.panel1.Controls.Add(this.Text_Register);
             this.panel1.Location = new System.Drawing.Point(100, 140);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 564);
+            this.panel1.Size = new System.Drawing.Size(388, 264);
             this.panel1.TabIndex = 4;
             // 
             // dateTime
@@ -106,14 +109,6 @@ namespace Community_v1
             this.dateTime.Name = "dateTime";
             this.dateTime.Size = new System.Drawing.Size(250, 27);
             this.dateTime.TabIndex = 12;
-            // 
-            // passwordText_too
-            // 
-            this.passwordText_too.Location = new System.Drawing.Point(58, 133);
-            this.passwordText_too.Name = "passwordText_too";
-            this.passwordText_too.Size = new System.Drawing.Size(250, 27);
-            this.passwordText_too.TabIndex = 9;
-            this.passwordText_too.UseSystemPasswordChar = true;
             // 
             // buttonRegister
             // 
@@ -124,7 +119,7 @@ namespace Community_v1
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonRegister.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonRegister.ForeColor = System.Drawing.Color.White;
-            this.buttonRegister.Location = new System.Drawing.Point(124, 328);
+            this.buttonRegister.Location = new System.Drawing.Point(124, 224);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(139, 29);
             this.buttonRegister.TabIndex = 8;
@@ -140,21 +135,7 @@ namespace Community_v1
             this.password_see.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.password_see.TabIndex = 5;
             this.password_see.TabStop = false;
-            // 
-            // passwordText
-            // 
-            this.passwordText.Location = new System.Drawing.Point(58, 100);
-            this.passwordText.Name = "passwordText";
-            this.passwordText.Size = new System.Drawing.Size(250, 27);
-            this.passwordText.TabIndex = 4;
-            this.passwordText.UseSystemPasswordChar = true;
-            // 
-            // loginText
-            // 
-            this.loginText.Location = new System.Drawing.Point(58, 57);
-            this.loginText.Name = "loginText";
-            this.loginText.Size = new System.Drawing.Size(250, 27);
-            this.loginText.TabIndex = 3;
+            this.password_see.Click += new System.EventHandler(this.password_see_Click);
             // 
             // icon_lock
             // 
@@ -183,26 +164,109 @@ namespace Community_v1
             this.Text_Register.Size = new System.Drawing.Size(100, 23);
             this.Text_Register.TabIndex = 11;
             // 
-            // textBox1
+            // loginText
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 220);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 27);
-            this.textBox1.TabIndex = 13;
+            this.loginText.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.loginText.Cue = "e-mail";
+            this.loginText.Location = new System.Drawing.Point(58, 57);
+            this.loginText.Name = "loginText";
+            this.loginText.Size = new System.Drawing.Size(250, 27);
+            this.loginText.TabIndex = 14;
+            // 
+            // passText2
+            // 
+            this.passText2.Cue = "password";
+            this.passText2.Location = new System.Drawing.Point(58, 132);
+            this.passText2.Name = "passText2";
+            this.passText2.Size = new System.Drawing.Size(250, 27);
+            this.passText2.TabIndex = 15;
+            // 
+            // passText
+            // 
+            this.passText.Cue = "password";
+            this.passText.Location = new System.Drawing.Point(58, 99);
+            this.passText.Name = "passText";
+            this.passText.Size = new System.Drawing.Size(250, 27);
+            this.passText.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Location = new System.Drawing.Point(227, 483);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 0);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "2022 © Rostyslav.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Down
+            // 
+            this.Down.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Down.Location = new System.Drawing.Point(223, 463);
+            this.Down.Name = "Down";
+            this.Down.Size = new System.Drawing.Size(141, 0);
+            this.Down.TabIndex = 6;
+            this.Down.Text = "2022 © Community.";
+            this.Down.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Location = new System.Drawing.Point(227, 471);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "2022 © Rostyslav.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Location = new System.Drawing.Point(223, 451);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "2022 © Community.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.MaximumSize = new System.Drawing.Size(600, 34);
+            this.panel2.MinimumSize = new System.Drawing.Size(600, 34);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(600, 34);
+            this.panel2.TabIndex = 10;
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 753);
+            this.ClientSize = new System.Drawing.Size(582, 503);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Down);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.top);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(600, 800);
-            this.MinimumSize = new System.Drawing.Size(600, 800);
+            this.MaximumSize = new System.Drawing.Size(600, 550);
+            this.MinimumSize = new System.Drawing.Size(600, 550);
             this.Name = "RegisterForm";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -219,15 +283,19 @@ namespace Community_v1
         private System.Windows.Forms.Panel top;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox passwordText_too;
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.PictureBox password_see;
-        private System.Windows.Forms.TextBox passwordText;
-        private System.Windows.Forms.TextBox loginText;
         private System.Windows.Forms.PictureBox icon_lock;
         private System.Windows.Forms.PictureBox icon_user;
         private System.Windows.Forms.Label Text_Register;
         private System.Windows.Forms.DateTimePicker dateTime;
-        private System.Windows.Forms.TextBox textBox1;
+        private CueTextBox passText;
+        private CueTextBox passText2;
+        private CueTextBox loginText;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Down;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -40,14 +40,21 @@ namespace Community_v1
             adapter.SelectCommand = command;
             adapter.Fill(table);
             if (table.Rows.Count > 0)
+            {
                 MessageBox.Show("Уху... Вы вошли в систему");
+                mainForm newForm = new mainForm();
+                newForm.Show();
+                //  this.Close();
+                this.Hide();
+            }
             else
                 MessageBox.Show("Что-то не так...");
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-
+            RegisterForm newForm = new RegisterForm();
+            newForm.Show();
         }
 
 

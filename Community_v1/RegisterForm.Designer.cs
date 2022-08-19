@@ -33,15 +33,15 @@ namespace Community_v1
             this.top = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.passText = new Community_v1.CueTextBox();
+            this.passText2 = new Community_v1.CueTextBox();
+            this.loginText = new Community_v1.CueTextBox();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.password_see = new System.Windows.Forms.PictureBox();
             this.icon_lock = new System.Windows.Forms.PictureBox();
             this.icon_user = new System.Windows.Forms.PictureBox();
             this.Text_Register = new System.Windows.Forms.Label();
-            this.loginText = new Community_v1.CueTextBox();
-            this.passText2 = new Community_v1.CueTextBox();
-            this.passText = new Community_v1.CueTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Down = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -103,6 +103,31 @@ namespace Community_v1
             this.panel1.Size = new System.Drawing.Size(388, 264);
             this.panel1.TabIndex = 4;
             // 
+            // passText
+            // 
+            this.passText.Cue = "password";
+            this.passText.Location = new System.Drawing.Point(58, 99);
+            this.passText.Name = "passText";
+            this.passText.Size = new System.Drawing.Size(250, 27);
+            this.passText.TabIndex = 16;
+            // 
+            // passText2
+            // 
+            this.passText2.Cue = "password";
+            this.passText2.Location = new System.Drawing.Point(58, 132);
+            this.passText2.Name = "passText2";
+            this.passText2.Size = new System.Drawing.Size(250, 27);
+            this.passText2.TabIndex = 15;
+            // 
+            // loginText
+            // 
+            this.loginText.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.loginText.Cue = "e-mail";
+            this.loginText.Location = new System.Drawing.Point(58, 57);
+            this.loginText.Name = "loginText";
+            this.loginText.Size = new System.Drawing.Size(250, 27);
+            this.loginText.TabIndex = 14;
+            // 
             // dateTime
             // 
             this.dateTime.Location = new System.Drawing.Point(58, 175);
@@ -125,6 +150,7 @@ namespace Community_v1
             this.buttonRegister.TabIndex = 8;
             this.buttonRegister.Text = "Регистрироватся";
             this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // password_see
             // 
@@ -163,31 +189,6 @@ namespace Community_v1
             this.Text_Register.Name = "Text_Register";
             this.Text_Register.Size = new System.Drawing.Size(100, 23);
             this.Text_Register.TabIndex = 11;
-            // 
-            // loginText
-            // 
-            this.loginText.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.loginText.Cue = "e-mail";
-            this.loginText.Location = new System.Drawing.Point(58, 57);
-            this.loginText.Name = "loginText";
-            this.loginText.Size = new System.Drawing.Size(250, 27);
-            this.loginText.TabIndex = 14;
-            // 
-            // passText2
-            // 
-            this.passText2.Cue = "password";
-            this.passText2.Location = new System.Drawing.Point(58, 132);
-            this.passText2.Name = "passText2";
-            this.passText2.Size = new System.Drawing.Size(250, 27);
-            this.passText2.TabIndex = 15;
-            // 
-            // passText
-            // 
-            this.passText.Cue = "password";
-            this.passText.Location = new System.Drawing.Point(58, 99);
-            this.passText.Name = "passText";
-            this.passText.Size = new System.Drawing.Size(250, 27);
-            this.passText.TabIndex = 16;
             // 
             // label1
             // 

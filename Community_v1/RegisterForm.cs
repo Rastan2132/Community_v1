@@ -15,7 +15,7 @@ namespace Community_v1
         {
             InitializeComponent();
         }
-        public const string comm = "INSERT INTO `users` (`login`, `password`, `nickname`) VALUES(@login, @password, @nickname);";
+        public const string comm = "INSERT INTO `users` (`login`, `password`, `nickname`, `data_of_birth`) VALUES(@login, @password, @nickname, @data_of_birth);";
 
         public int passIndex = 1;
 
@@ -50,13 +50,13 @@ namespace Community_v1
             if (passText.Text != passText2.Text|| passText.Text == "" || passText2.Text == "" || loginText.Text=="")
                 MessageBox.Show("Что-то не так... Проверь пароль");
             else {
-                /////////////////////////////////////////////////////////////////,, `data_of_birth` , @data_of_birth
+                /////////////////////////////////////////////////////////////////,
 
                 MySqlCommand command = new MySqlCommand(comm, database.getConnection());
                 command.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginText.Text;
                 command.Parameters.Add("@password", MySqlDbType.VarChar).Value = passText.Text;
                 command.Parameters.Add("@nickname", MySqlDbType.VarChar).Value = loginText.Text;
-               // command.Parameters.Add("@data_of_birth", MySqlDbType.VarChar).Value = dateTime.Value;
+                command.Parameters.Add("@data_of_birth", MySqlDbType.VarChar).Value = dateTime.Value.ToString("yyyy-MM-dd");
 
                 /////////////////////////////////////////////////////////////////
 

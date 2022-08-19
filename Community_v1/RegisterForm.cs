@@ -15,12 +15,7 @@ namespace Community_v1
         {
             InitializeComponent();
         }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
+        public const string comm = "INSERT INTO `users` (`login`, `password`, `nickname`) VALUES(@login, @password, @nickname);";
 
         public int passIndex = 1;
 
@@ -57,7 +52,7 @@ namespace Community_v1
             else {
                 /////////////////////////////////////////////////////////////////,, `data_of_birth` , @data_of_birth
 
-                MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`login`, `password`, `nickname`) VALUES(@login, @password, @nickname);", database.getConnection());
+                MySqlCommand command = new MySqlCommand(comm, database.getConnection());
                 command.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginText.Text;
                 command.Parameters.Add("@password", MySqlDbType.VarChar).Value = passText.Text;
                 command.Parameters.Add("@nickname", MySqlDbType.VarChar).Value = loginText.Text;

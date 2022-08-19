@@ -13,6 +13,7 @@ namespace Community_v1
 {
     public partial class login : Form
     {
+        public const string comm = "SELECT* FROM `users` WHERE `login` = @mU AND `password`= @pU";
         public login()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace Community_v1
 
             //---------------------------------------------------//
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @mU AND `password`= @pU", database.getConnection());
+            MySqlCommand command = new MySqlCommand(comm, database.getConnection());
             command.Parameters.Add("@mU", MySqlDbType.VarChar).Value = mailUser;
             command.Parameters.Add("@pU", MySqlDbType.VarChar).Value = passUser;
 

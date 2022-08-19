@@ -16,6 +16,7 @@ namespace Community_v1
             InitializeComponent();
         }
         public const string comm = "INSERT INTO `users` (`login`, `password`, `nickname`, `data_of_birth`) VALUES(@login, @password, @nickname, @data_of_birth);";
+        public const string commChek = "SELECT* FROM `users` WHERE `login` = @login";
 
         public int passIndex = 1;
 
@@ -46,10 +47,16 @@ namespace Community_v1
         {
 
             DB database = new DB();
+
             /////////////////////////////////////////////////////////////////
+
+            if (ChekUser())
+                return; ;
+
             if (passText.Text != passText2.Text|| passText.Text == "" || passText2.Text == "" || loginText.Text=="")
                 MessageBox.Show("Что-то не так... Проверь пароль");
             else {
+
                 /////////////////////////////////////////////////////////////////,
 
                 MySqlCommand command = new MySqlCommand(comm, database.getConnection());
@@ -69,5 +76,29 @@ namespace Community_v1
                 this.Close();
                 }
         }
+        public bool ChekUser()
+        {
+            DB database = new DB();
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            /////////////////////////////////////////////////////////////////,
+
+            MySqlCommand command = new MySqlCommand(commChek, database.getConnection());
+            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginText.Text;
+
+            /////////////////////////////////////////////////////////////////
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            database.openConnection();
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Этот e-mail занят");
+                return true;
+            }
+            else
+                return false;
+        }
+        
     }
 }

@@ -266,6 +266,7 @@ namespace Community_v1
             this.MaximumSize = new System.Drawing.Size(600, 550);
             this.MinimumSize = new System.Drawing.Size(600, 550);
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

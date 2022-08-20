@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Community_v1
 {
@@ -19,10 +20,11 @@ namespace Community_v1
             InitializeComponent();
         }
         //----------------------###-----------------------------//
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private async void buttonLogin_Click(object sender, EventArgs e)
         {
             string mailUser = loginText.Text;
             string passUser = passwordText.Text;
+            string path = @"..\..\..\log\lognote.txt";
 
             //---------------------------------------------------//
 
@@ -43,9 +45,12 @@ namespace Community_v1
             if (table.Rows.Count > 0)
             {
                 MessageBox.Show("Уху... Вы вошли в систему");
-                mainForm newForm = new mainForm();
-                newForm.Show();
-                //  this.Close();
+                using (FileStream fstream = new FileStream(path, FileMode.OpenOrCreate))
+                {
+                    byte[] buffer = Encoding.Default.GetBytes(mailUser +" " + passUser);
+                    await fstream.WriteAsync(buffer, 0, buffer.Length);
+                }
+               
                 this.Hide();
             }
             else
@@ -75,6 +80,11 @@ namespace Community_v1
                 passwordText.UseSystemPasswordChar = true;
                 passIndex = 1;
             }
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

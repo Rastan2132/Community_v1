@@ -17,7 +17,6 @@ namespace Community_v1
         }
         public const string comm = "INSERT INTO `users` (`login`, `password`, `nickname`, `data_of_birth`) VALUES(@login, @password, @nickname, @data_of_birth);";
         public const string commChek = "SELECT* FROM `users` WHERE `login` = @login";
-
         public int passIndex = 1;
 
 
@@ -81,7 +80,8 @@ namespace Community_v1
             DB database = new DB();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            /////////////////////////////////////////////////////////////////,
+
+            /////////////////////////////////////////////////////////////////
 
             MySqlCommand command = new MySqlCommand(commChek, database.getConnection());
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginText.Text;

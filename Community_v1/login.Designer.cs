@@ -242,7 +242,9 @@ namespace Community_v1
             this.MaximumSize = new System.Drawing.Size(422, 511);
             this.MinimumSize = new System.Drawing.Size(421, 510);
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login in Community.";
+            this.Load += new System.EventHandler(this.login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_see)).EndInit();

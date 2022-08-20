@@ -15,7 +15,6 @@ namespace Community_v1
                                                         "User Id=root;" +
                                                         "password=root");
 
-      
         public void openConnection()
         {
             if (connection.State == System.Data.ConnectionState.Closed)

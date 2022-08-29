@@ -30,7 +30,7 @@ namespace Community_v1
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.eMail = new System.Windows.Forms.Label();
+            this.eMailText = new System.Windows.Forms.Label();
             this.NickName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,15 +45,15 @@ namespace Community_v1
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // eMail
+            // eMailText
             // 
-            this.eMail.AutoSize = true;
-            this.eMail.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.eMail.Location = new System.Drawing.Point(75, 40);
-            this.eMail.Name = "eMail";
-            this.eMail.Size = new System.Drawing.Size(45, 20);
-            this.eMail.TabIndex = 4;
-            this.eMail.Text = "None";
+            this.eMailText.AutoSize = true;
+            this.eMailText.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.eMailText.Location = new System.Drawing.Point(75, 40);
+            this.eMailText.Name = "eMailText";
+            this.eMailText.Size = new System.Drawing.Size(45, 20);
+            this.eMailText.TabIndex = 4;
+            this.eMailText.Text = "None";
             // 
             // NickName
             // 
@@ -69,7 +69,7 @@ namespace Community_v1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.eMail);
+            this.Controls.Add(this.eMailText);
             this.Controls.Add(this.NickName);
             this.Controls.Add(this.pictureBox1);
             this.MinimumSize = new System.Drawing.Size(290, 70);
@@ -84,7 +84,7 @@ namespace Community_v1
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label eMail;
+        private System.Windows.Forms.Label eMailText;
         private System.Windows.Forms.Label NickName;
     }
 }

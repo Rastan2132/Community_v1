@@ -6,13 +6,16 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Community_v1
+namespace Community_v1 
 {
-    public partial class searchUser : UserControl
+    public partial class searchUser  : UserControl 
     {
-        public searchUser()
+        public searchUser (String name, string eMail)
         {
             InitializeComponent();
+            /////////////////////
+            NickName.Text = name;
+            eMailText.Text = eMail;
         }
     }
 }

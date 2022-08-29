@@ -63,11 +63,14 @@ namespace Community_v1
             this.messages.Name = "messages";
             this.messages.Size = new System.Drawing.Size(300, 416);
             this.messages.TabIndex = 4;
+            this.messages.Paint += new System.Windows.Forms.PaintEventHandler(this.messages_Paint);
             // 
             // searchUserText
             // 
-            this.searchUserText.Cue = "Search for nickname";
+            this.searchUserText.Cue = null;
             this.searchUserText.Location = new System.Drawing.Point(3, 3);
+            this.searchUserText.MaximumSize = new System.Drawing.Size(255, 27);
+            this.searchUserText.MinimumSize = new System.Drawing.Size(255, 27);
             this.searchUserText.Name = "searchUserText";
             this.searchUserText.Size = new System.Drawing.Size(255, 27);
             this.searchUserText.TabIndex = 0;

@@ -85,9 +85,9 @@ namespace Community_v1
             this.Controls.Add(this.Mess);
             this.Controls.Add(this.NickName);
             this.Controls.Add(this.pictureBox1);
-            this.MinimumSize = new System.Drawing.Size(290, 70);
+            this.MinimumSize = new System.Drawing.Size(285, 70);
             this.Name = "UserMess";
-            this.Size = new System.Drawing.Size(290, 70);
+            this.Size = new System.Drawing.Size(285, 70);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

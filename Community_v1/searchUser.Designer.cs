@@ -1,7 +1,7 @@
 ﻿
 namespace Community_v1
 {
-    partial class UserMess
+    partial class searchUser
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -30,9 +30,8 @@ namespace Community_v1
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.eMail = new System.Windows.Forms.Label();
             this.NickName = new System.Windows.Forms.Label();
-            this.Mess = new System.Windows.Forms.Label();
-            this.TimeLastMess = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,8 +42,18 @@ namespace Community_v1
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // eMail
+            // 
+            this.eMail.AutoSize = true;
+            this.eMail.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.eMail.Location = new System.Drawing.Point(75, 40);
+            this.eMail.Name = "eMail";
+            this.eMail.Size = new System.Drawing.Size(45, 20);
+            this.eMail.TabIndex = 4;
+            this.eMail.Text = "None";
             // 
             // NickName
             // 
@@ -53,40 +62,18 @@ namespace Community_v1
             this.NickName.Location = new System.Drawing.Point(75, 10);
             this.NickName.Name = "NickName";
             this.NickName.Size = new System.Drawing.Size(63, 28);
-            this.NickName.TabIndex = 1;
+            this.NickName.TabIndex = 3;
             this.NickName.Text = "None";
             // 
-            // Mess
-            // 
-            this.Mess.AutoSize = true;
-            this.Mess.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Mess.Location = new System.Drawing.Point(75, 40);
-            this.Mess.Name = "Mess";
-            this.Mess.Size = new System.Drawing.Size(45, 20);
-            this.Mess.TabIndex = 2;
-            this.Mess.Text = "None";
-            // 
-            // TimeLastMess
-            // 
-            this.TimeLastMess.AutoSize = true;
-            this.TimeLastMess.Font = new System.Drawing.Font("Segoe UI", 4.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.TimeLastMess.Location = new System.Drawing.Point(232, 10);
-            this.TimeLastMess.Name = "TimeLastMess";
-            this.TimeLastMess.Size = new System.Drawing.Size(55, 11);
-            this.TimeLastMess.TabIndex = 3;
-            this.TimeLastMess.Text = "12/12/22 12:12";
-            // 
-            // UserMess
+            // searchUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.TimeLastMess);
-            this.Controls.Add(this.Mess);
+            this.Controls.Add(this.eMail);
             this.Controls.Add(this.NickName);
             this.Controls.Add(this.pictureBox1);
             this.MinimumSize = new System.Drawing.Size(290, 70);
-            this.Name = "UserMess";
+            this.Name = "searchUser";
             this.Size = new System.Drawing.Size(290, 70);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -97,8 +84,7 @@ namespace Community_v1
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label eMail;
         private System.Windows.Forms.Label NickName;
-        private System.Windows.Forms.Label Mess;
-        private System.Windows.Forms.Label TimeLastMess;
     }
 }

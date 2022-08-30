@@ -32,6 +32,7 @@ namespace Community_v1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.top = new System.Windows.Forms.Panel();
             this.messages = new System.Windows.Forms.FlowLayoutPanel();
+            this.searchUserText = new Community_v1.CueTextBox();
             this.searchButton = new System.Windows.Forms.PictureBox();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.logoInMainPanel = new System.Windows.Forms.PictureBox();
@@ -58,6 +59,7 @@ namespace Community_v1
             this.messages.AutoScroll = true;
             this.messages.AutoSize = true;
             this.messages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(138)))), ((int)(((byte)(200)))));
+            this.messages.Controls.Add(this.searchUserText);
             this.messages.Controls.Add(this.searchButton);
             this.messages.Dock = System.Windows.Forms.DockStyle.Left;
             this.messages.Location = new System.Drawing.Point(0, 34);
@@ -67,10 +69,18 @@ namespace Community_v1
             this.messages.TabIndex = 4;
             this.messages.Paint += new System.Windows.Forms.PaintEventHandler(this.messages_Paint);
             // 
+            // searchUserText
+            // 
+            this.searchUserText.Cue = "search for nickname";
+            this.searchUserText.Location = new System.Drawing.Point(3, 3);
+            this.searchUserText.Name = "searchUserText";
+            this.searchUserText.Size = new System.Drawing.Size(255, 27);
+            this.searchUserText.TabIndex = 2;
+            // 
             // searchButton
             // 
             this.searchButton.Image = global::Community_v1.Properties.Resources.search_icon;
-            this.searchButton.Location = new System.Drawing.Point(3, 3);
+            this.searchButton.Location = new System.Drawing.Point(264, 3);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(27, 27);
             this.searchButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -115,6 +125,7 @@ namespace Community_v1
             this.Text = "mainForm";
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.messages.ResumeLayout(false);
+            this.messages.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchButton)).EndInit();
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
@@ -128,9 +139,9 @@ namespace Community_v1
 
         private System.Windows.Forms.Panel top;
         private System.Windows.Forms.FlowLayoutPanel messages;
-        private CueTextBox searchUserText;
         private System.Windows.Forms.PictureBox searchButton;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.PictureBox logoInMainPanel;
+        private CueTextBox searchUserText;
     }
 }

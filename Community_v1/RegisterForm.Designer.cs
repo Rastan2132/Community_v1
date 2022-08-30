@@ -33,6 +33,9 @@ namespace Community_v1
             this.top = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.passText2 = new Community_v1.CueTextBox();
+            this.passText = new Community_v1.CueTextBox();
+            this.loginText = new Community_v1.CueTextBox();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.password_see = new System.Windows.Forms.PictureBox();
@@ -86,6 +89,9 @@ namespace Community_v1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
+            this.panel1.Controls.Add(this.passText2);
+            this.panel1.Controls.Add(this.passText);
+            this.panel1.Controls.Add(this.loginText);
             this.panel1.Controls.Add(this.dateTime);
             this.panel1.Controls.Add(this.buttonRegister);
             this.panel1.Controls.Add(this.password_see);
@@ -96,6 +102,31 @@ namespace Community_v1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(388, 264);
             this.panel1.TabIndex = 4;
+            // 
+            // passText2
+            // 
+            this.passText2.Cue = "passwoer too";
+            this.passText2.Location = new System.Drawing.Point(58, 133);
+            this.passText2.Name = "passText2";
+            this.passText2.Size = new System.Drawing.Size(250, 27);
+            this.passText2.TabIndex = 15;
+            this.passText2.TextChanged += new System.EventHandler(this.cueTextBox2_TextChanged);
+            // 
+            // passText
+            // 
+            this.passText.Cue = "password";
+            this.passText.Location = new System.Drawing.Point(58, 100);
+            this.passText.Name = "passText";
+            this.passText.Size = new System.Drawing.Size(250, 27);
+            this.passText.TabIndex = 14;
+            // 
+            // loginText
+            // 
+            this.loginText.Cue = "e-mail";
+            this.loginText.Location = new System.Drawing.Point(58, 57);
+            this.loginText.Name = "loginText";
+            this.loginText.Size = new System.Drawing.Size(250, 27);
+            this.loginText.TabIndex = 13;
             // 
             // dateTime
             // 
@@ -240,6 +271,7 @@ namespace Community_v1
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_see)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_lock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_user)).EndInit();
@@ -267,5 +299,6 @@ namespace Community_v1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
+        private CueTextBox cueTextBox2;
     }
 }

@@ -99,6 +99,10 @@ namespace Community_v1
             else
                 return false;
         }
-        
+
+        private void cueTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

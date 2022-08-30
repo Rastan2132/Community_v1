@@ -55,10 +55,10 @@ namespace Community_v1
             if (table.Rows.Count > 0)
             {
                 searchUser Controls = new searchUser(nickNameUser, nickNameUser);             //      !!!!!!!!
-                this.Controls.Add(Controls);
+                messages.Controls.Add(Controls);
             }
             else
-                MessageBox.Show("Юзер в жопе");                                             //      !!!!!!!!
+                MessageBox.Show("Юзер в жопе...");                                             //      !!!!!!!!
         }
 
         private void messages_Paint(object sender, PaintEventArgs e)

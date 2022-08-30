@@ -10,9 +10,15 @@ namespace Community_v1
 {
     public partial class UserMess : UserControl
     {
-        public UserMess()
+        public UserMess(String name, string mess, string data)
         {
             InitializeComponent();
+
+            /////////////////////
+            
+            NickName.Text = name;
+            TimeLastMess.Text = data;
+            MessLastText.Text = mess;
         }
     }
 }

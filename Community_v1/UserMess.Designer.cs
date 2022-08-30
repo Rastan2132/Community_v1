@@ -31,7 +31,7 @@ namespace Community_v1
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NickName = new System.Windows.Forms.Label();
-            this.Mess = new System.Windows.Forms.Label();
+            this.MessLastText = new System.Windows.Forms.Label();
             this.TimeLastMess = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,21 +56,21 @@ namespace Community_v1
             this.NickName.TabIndex = 1;
             this.NickName.Text = "None";
             // 
-            // Mess
+            // MessLastText
             // 
-            this.Mess.AutoSize = true;
-            this.Mess.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Mess.Location = new System.Drawing.Point(75, 40);
-            this.Mess.Name = "Mess";
-            this.Mess.Size = new System.Drawing.Size(45, 20);
-            this.Mess.TabIndex = 2;
-            this.Mess.Text = "None";
+            this.MessLastText.AutoSize = true;
+            this.MessLastText.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.MessLastText.Location = new System.Drawing.Point(75, 40);
+            this.MessLastText.Name = "MessLastText";
+            this.MessLastText.Size = new System.Drawing.Size(45, 20);
+            this.MessLastText.TabIndex = 2;
+            this.MessLastText.Text = "None";
             // 
             // TimeLastMess
             // 
             this.TimeLastMess.AutoSize = true;
             this.TimeLastMess.Font = new System.Drawing.Font("Segoe UI", 4.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.TimeLastMess.Location = new System.Drawing.Point(232, 10);
+            this.TimeLastMess.Location = new System.Drawing.Point(228, 10);
             this.TimeLastMess.Name = "TimeLastMess";
             this.TimeLastMess.Size = new System.Drawing.Size(55, 11);
             this.TimeLastMess.TabIndex = 3;
@@ -82,7 +82,7 @@ namespace Community_v1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Controls.Add(this.TimeLastMess);
-            this.Controls.Add(this.Mess);
+            this.Controls.Add(this.MessLastText);
             this.Controls.Add(this.NickName);
             this.Controls.Add(this.pictureBox1);
             this.MinimumSize = new System.Drawing.Size(285, 70);
@@ -98,7 +98,7 @@ namespace Community_v1
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label NickName;
-        private System.Windows.Forms.Label Mess;
+        private System.Windows.Forms.Label MessLastText;
         private System.Windows.Forms.Label TimeLastMess;
     }
 }

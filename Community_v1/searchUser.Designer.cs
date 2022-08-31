@@ -76,6 +76,8 @@ namespace Community_v1
             this.MinimumSize = new System.Drawing.Size(290, 70);
             this.Name = "searchUser";
             this.Size = new System.Drawing.Size(290, 70);
+            this.Load += new System.EventHandler(this.searchUser_Load);
+            this.Click += new System.EventHandler(this.searchUser_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

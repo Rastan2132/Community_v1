@@ -54,7 +54,7 @@ namespace Community_v1
             adapter.Fill(table);
             if (table.Rows.Count > 0)
             {
-                searchUser Controls = new searchUser(nickNameUser, nickNameUser);             //      !!!!!!!!
+                searchUser Controls = new searchUser(nickNameUser, nickNameUser,1,1);             //      !!!!!!!!
                 messages.Controls.Add(Controls);
             }
             else
@@ -62,6 +62,32 @@ namespace Community_v1
         }
 
         private void messages_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NameOfYourFrend_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainForm_ResizeEnd(object sender, EventArgs e)
+        {
+            int x = this.Width;
+            this.panelMess.Width = x - 400;
+        }
+
+        private void top_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textMess_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cueTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

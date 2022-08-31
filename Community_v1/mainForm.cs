@@ -10,8 +10,14 @@ using MySql.Data.MySqlClient;
 
 namespace Community_v1
 {
-    public partial class mainForm : Form
+    public partial class
+        mainForm : Form
     {
+        public string labelName
+        {
+            get {return NameOfYourFrend.Text; }
+            set { NameOfYourFrend.Text = value; }
+        }
         public const string comm = "SELECT* FROM `users` WHERE `nickname` = @NU";
         public mainForm()
         {
@@ -32,7 +38,7 @@ namespace Community_v1
         {
             
         }
-
+        
         private void searchButton_Click(object sender, EventArgs e)
         {
             string nickNameUser = searchUserText.Text;
@@ -55,12 +61,17 @@ namespace Community_v1
             if (table.Rows.Count > 0)
             {
                 searchUser Controls = new searchUser(nickNameUser, nickNameUser,1,1);             //      !!!!!!!!
+                Controls.Click += this.searchUser_Click;
                 messages.Controls.Add(Controls);
             }
             else
                 MessageBox.Show("Юзер в жопе...");                                             //      !!!!!!!!
         }
-
+        private void searchUser_Click(object sender, EventArgs e)
+        {
+            //this.Visible = false;
+         //   NameOfYourFrend.text = name;
+        }
         private void messages_Paint(object sender, PaintEventArgs e)
         {
 

@@ -354,7 +354,7 @@ namespace Community_v1
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label NameOfYourFrend;
+        public System.Windows.Forms.Label NameOfYourFrend;
         private System.Windows.Forms.PictureBox pictureForYourFrend;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;

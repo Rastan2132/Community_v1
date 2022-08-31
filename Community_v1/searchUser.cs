@@ -20,7 +20,10 @@ namespace Community_v1
 
         private void searchUser_Click(object sender, EventArgs e)
         {
+            mainForm mainForm = new mainForm();
+            mainForm.NameOfYourFrend.Text = NickName.Text;
             this.Visible = false;
+            
            // NameOfYourFrend.text = name;
         }
 

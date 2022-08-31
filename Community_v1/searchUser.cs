@@ -10,21 +10,22 @@ namespace Community_v1
 {
     public partial class searchUser  : UserControl 
     {
-        public searchUser (String name, string eMail, int id_a, int Id_b)
+        public searchUser (String name, string eMail, int id_a, int Id_b, mainForm form)
         {
             InitializeComponent();
             /////////////////////
             NickName.Text = name;
             eMailText.Text = eMail;
+            this.form = form;
         }
+        private mainForm form;
 
         private void searchUser_Click(object sender, EventArgs e)
         {
-            mainForm mainForm = new mainForm();
-            mainForm.NameOfYourFrend.Text = NickName.Text;
+            this.form.labelName = NickName.Text;
+          //  mainForm.NameOfYourFrend.Text = NickName.Text;
             this.Visible = false;
             
-           // NameOfYourFrend.text = name;
         }
 
         private void searchUser_Load(object sender, EventArgs e)

@@ -60,7 +60,7 @@ namespace Community_v1
             adapter.Fill(table);
             if (table.Rows.Count > 0)
             {
-                searchUser Controls = new searchUser(nickNameUser, nickNameUser,1,1);             //      !!!!!!!!
+                searchUser Controls = new searchUser(nickNameUser, nickNameUser, 1, 1, this);             //      !!!!!!!!
                 Controls.Click += this.searchUser_Click;
                 messages.Controls.Add(Controls);
             }
@@ -101,6 +101,21 @@ namespace Community_v1
         private void cueTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            string path = @"..\..\..\log\lognote.txt";
+
+            //---------------------------------------------------//
+           
+                using (FileStream fstream = new FileStream(path, FileMode.OpenOrCreate))
+                {
+                File.Delete(path);
+                }
+
+                this.Hide();
+            
         }
     }
 }

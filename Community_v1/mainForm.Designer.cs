@@ -44,6 +44,7 @@ namespace Community_v1
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panelMess = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -60,6 +61,7 @@ namespace Community_v1
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panelMess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -195,6 +197,7 @@ namespace Community_v1
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(138)))), ((int)(((byte)(200)))));
             this.flowLayoutPanel2.Controls.Add(this.pictureBox5);
             this.flowLayoutPanel2.Controls.Add(this.pictureBox6);
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox7);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(460, 0);
             this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(40, 0);
@@ -224,6 +227,18 @@ namespace Community_v1
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 7;
             this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(3, 85);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 8;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // panelMess
             // 
@@ -325,6 +340,7 @@ namespace Community_v1
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panelMess.ResumeLayout(false);
             this.panelMess.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -358,5 +374,6 @@ namespace Community_v1
         private System.Windows.Forms.PictureBox pictureForYourFrend;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

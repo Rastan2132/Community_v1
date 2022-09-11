@@ -109,13 +109,53 @@ namespace Community_v1
 
             //---------------------------------------------------//
            
-                using (FileStream fstream = new FileStream(path, FileMode.OpenOrCreate))
-                {
-                File.Delete(path);
-                }
-
-                this.Hide();
+               
             
+                File.Delete(path);
+                
+
+                this.Close();
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DateTime date1 = new DateTime();
+
+            yourMess Controls = new yourMess(cueTextBox1.Text, date1);             //      !!!!!!!!
+            cueTextBox1.Text = "";
+            flowLayoutPanel1.Controls.Add(Controls);
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+
+                    //Read the contents of the file into a stream
+                    var fileStream = openFileDialog.OpenFile();
+
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        fileContent = reader.ReadToEnd();
+                    }
+                }
+            }
         }
     }
 }

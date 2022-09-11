@@ -25,7 +25,7 @@ namespace Community_v1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.back = new System.Windows.Forms.Panel();
             this.loginText = new Community_v1.CueTextBox();
             this.passwordText = new Community_v1.CueTextBox();
             this.buttonRegister = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@ namespace Community_v1
             this.Down_login = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Down = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.back.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_see)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_lock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_user)).BeginInit();
@@ -48,25 +48,25 @@ namespace Community_v1
             this.Down_login.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // back
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.back.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
-            this.panel1.Controls.Add(this.loginText);
-            this.panel1.Controls.Add(this.passwordText);
-            this.panel1.Controls.Add(this.buttonRegister);
-            this.panel1.Controls.Add(this.or);
-            this.panel1.Controls.Add(this.buttonLogin);
-            this.panel1.Controls.Add(this.password_see);
-            this.panel1.Controls.Add(this.icon_lock);
-            this.panel1.Controls.Add(this.icon_user);
-            this.panel1.Controls.Add(this.Text_login);
-            this.panel1.Location = new System.Drawing.Point(76, 140);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 247);
-            this.panel1.TabIndex = 0;
+            this.back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
+            this.back.Controls.Add(this.loginText);
+            this.back.Controls.Add(this.passwordText);
+            this.back.Controls.Add(this.buttonRegister);
+            this.back.Controls.Add(this.or);
+            this.back.Controls.Add(this.buttonLogin);
+            this.back.Controls.Add(this.password_see);
+            this.back.Controls.Add(this.icon_lock);
+            this.back.Controls.Add(this.icon_user);
+            this.back.Controls.Add(this.Text_login);
+            this.back.Location = new System.Drawing.Point(76, 140);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(250, 247);
+            this.back.TabIndex = 0;
             // 
             // loginText
             // 
@@ -236,7 +236,7 @@ namespace Community_v1
             this.Controls.Add(this.Down_login);
             this.Controls.Add(this.top);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.back);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(422, 511);
@@ -245,8 +245,8 @@ namespace Community_v1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login in Community.";
             this.Load += new System.EventHandler(this.login_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.back.ResumeLayout(false);
+            this.back.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_see)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_lock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_user)).EndInit();
@@ -258,7 +258,7 @@ namespace Community_v1
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel back;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel top;
         private System.Windows.Forms.Panel Down_login;

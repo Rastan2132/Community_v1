@@ -8,13 +8,11 @@ using System.Windows.Forms;
 
 namespace Community_v1
 {
-    public partial class yourMess : UserControl
+    public partial class userPhoto : UserControl
     {
-        public yourMess(String messedar, DateTime date)
+        public userPhoto()
         {
             InitializeComponent();
-            mess.Text = messedar;
-            time.Text = date.ToString("MMMM dd, yyyy");
         }
     }
 }

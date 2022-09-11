@@ -1,7 +1,7 @@
 ﻿
 namespace Community_v1
 {
-    partial class yourMess
+    partial class userPhotoForYou
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -29,42 +29,47 @@ namespace Community_v1
         /// </summary>
         private void InitializeComponent()
         {
-            this.mess = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userPhotoForYou));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.time = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // mess
+            // pictureBox1
             // 
-            this.mess.AutoSize = true;
-            this.mess.Location = new System.Drawing.Point(10, 10);
-            this.mess.MaximumSize = new System.Drawing.Size(235, 980);
-            this.mess.MinimumSize = new System.Drawing.Size(0, 20);
-            this.mess.Name = "mess";
-            this.mess.Size = new System.Drawing.Size(42, 20);
-            this.mess.TabIndex = 0;
-            this.mess.Text = "none";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 28);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(250, 1000);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(248, 113);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // time
             // 
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Segoe UI", 4.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.time.Location = new System.Drawing.Point(198, 3);
+            this.time.ForeColor = System.Drawing.SystemColors.Control;
+            this.time.Location = new System.Drawing.Point(197, 8);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(55, 11);
-            this.time.TabIndex = 1;
+            this.time.TabIndex = 5;
             this.time.Text = "12/12/22 12:12";
             // 
-            // yourMess
+            // userPhotoForYou
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
             this.Controls.Add(this.time);
-            this.Controls.Add(this.mess);
+            this.Controls.Add(this.pictureBox1);
             this.MaximumSize = new System.Drawing.Size(255, 1000);
-            this.MinimumSize = new System.Drawing.Size(255, 30);
-            this.Name = "yourMess";
-            this.Size = new System.Drawing.Size(255, 30);
+            this.MinimumSize = new System.Drawing.Size(255, 150);
+            this.Name = "userPhotoForYou";
+            this.Size = new System.Drawing.Size(255, 150);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,7 +77,7 @@ namespace Community_v1
 
         #endregion
 
-        private System.Windows.Forms.Label mess;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label time;
     }
 }

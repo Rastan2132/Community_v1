@@ -32,7 +32,7 @@ namespace Community_v1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.top = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.back = new System.Windows.Forms.Panel();
             this.passText2 = new Community_v1.CueTextBox();
             this.passText = new Community_v1.CueTextBox();
             this.loginText = new Community_v1.CueTextBox();
@@ -48,7 +48,7 @@ namespace Community_v1
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.back.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_see)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_lock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_user)).BeginInit();
@@ -82,26 +82,26 @@ namespace Community_v1
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // back
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.back.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
-            this.panel1.Controls.Add(this.passText2);
-            this.panel1.Controls.Add(this.passText);
-            this.panel1.Controls.Add(this.loginText);
-            this.panel1.Controls.Add(this.dateTime);
-            this.panel1.Controls.Add(this.buttonRegister);
-            this.panel1.Controls.Add(this.password_see);
-            this.panel1.Controls.Add(this.icon_lock);
-            this.panel1.Controls.Add(this.icon_user);
-            this.panel1.Controls.Add(this.Text_Register);
-            this.panel1.Location = new System.Drawing.Point(100, 140);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 264);
-            this.panel1.TabIndex = 4;
+            this.back.AutoSize = true;
+            this.back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(90)))), ((int)(((byte)(150)))));
+            this.back.Controls.Add(this.passText2);
+            this.back.Controls.Add(this.passText);
+            this.back.Controls.Add(this.loginText);
+            this.back.Controls.Add(this.dateTime);
+            this.back.Controls.Add(this.buttonRegister);
+            this.back.Controls.Add(this.password_see);
+            this.back.Controls.Add(this.icon_lock);
+            this.back.Controls.Add(this.icon_user);
+            this.back.Controls.Add(this.Text_Register);
+            this.back.Location = new System.Drawing.Point(100, 140);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(388, 264);
+            this.back.TabIndex = 4;
             // 
             // passText2
             // 
@@ -260,7 +260,7 @@ namespace Community_v1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Down);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.top);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(600, 550);
@@ -270,8 +270,8 @@ namespace Community_v1
             this.Text = "Register";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.back.ResumeLayout(false);
+            this.back.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_see)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_lock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_user)).EndInit();
@@ -284,7 +284,7 @@ namespace Community_v1
 
         private System.Windows.Forms.Panel top;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel back;
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.PictureBox password_see;
         private System.Windows.Forms.PictureBox icon_lock;

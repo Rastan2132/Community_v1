@@ -19,7 +19,7 @@ namespace Community_v1
         {
             InitializeComponent();
         }
-        //----------------------###-----------------------------//
+        //---------------------------------------------------//
         private async void buttonLogin_Click(object sender, EventArgs e)
         {
             string mailUser = loginText.Text;
